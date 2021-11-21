@@ -8,7 +8,8 @@ const cors = require("cors");
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(bodyParser.json());
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
+app.use(cors({ origin: "*", credentials: false }));
 
 const calculateOrderAmount = (items) => {
   // Replace this constant with a calculation of the order's amount
